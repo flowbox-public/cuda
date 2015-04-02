@@ -125,7 +125,7 @@ getCudaLibraries :: Platform -> [String]
 getCudaLibraries (Platform _ os) =
   case os of
     OSX -> []
-    _   -> ["cudart", "cuda"]
+    _   -> ["cudart", "cuda", "nvrtc"]
 
 
 -- Slightly modified version of `words` from base - it takes predicate saying on which characters split.
